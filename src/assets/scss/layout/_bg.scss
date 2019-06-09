@@ -20,6 +20,7 @@
 			content: '';
 			display: block;
 			position: absolute;
+			background-color: rgba(black, 0.5);
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -46,7 +47,8 @@
 				'transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/bg.jpg');
+			background-image:		url('../../images/interior.jpg');
+			background-color: rgba(black, 0.2);
 			background-position:	center;
 			background-size:		cover;
 			background-repeat:		no-repeat;
