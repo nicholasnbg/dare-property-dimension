@@ -12,52 +12,42 @@ const IndexP = (props) => {
   const [timeoutId, setTimeoutId] = useState(false)
   const [articleTimeout, setArticleTimeout] = useState(false)
   const [article, setArticle] = useState('')
-  const [wrapperRef, setWrapperRef] = useState(false)
 
   useEffect(() => {
     setTimeoutId(setTimeout(() => {
       setLoading('');
     }, 100))
-    document.addEventListener('mousedown', handleClickOutside)
     return () => {
       if(timeoutId){
         clearTimeout(timeoutId)
       }
-      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
 
   const handleOpenArticle = (article) => {
-    setIsArticleVisible(!isArticleVisible)
+    console.log({isArticleVisible})
+    setIsArticleVisible(true)
     setArticle(article)
 
     setTimeout(() => {
-      setFuncTimeout(!timeout)
+      setFuncTimeout(true)
     }, 325)
 
     setTimeout(() => {
-      setArticleTimeout(!articleTimeout)
+      setArticleTimeout(true)
     }, 350)
   }
 
   const handleCloseArticle = () => {
-    setArticleTimeout(!articleTimeout)
+    setArticleTimeout(false)
     setTimeout(() => {
-      setFuncTimeout(!timeout)
+      setFuncTimeout(false)
     }, 325)
 
     setTimeout(()=>{
       setIsArticleVisible(!isArticleVisible)
       setArticle('')
     }, 350)
-  }
-
-  const handleClickOutside = (event) => {
-    if(wrapperRef && !wrapperRef.contains(event.target)) {
-      if(isArticleVisible) {
-        handleCloseArticle();
-      }
-    }
   }
 
   return (
@@ -71,7 +61,6 @@ const IndexP = (props) => {
             articleTimeout={articleTimeout}
             article={article}
             onCloseArticle={handleCloseArticle}
-            setWrapperRef={setWrapperRef}
           />
           <Footer timeout={timeout} />
         </div>
