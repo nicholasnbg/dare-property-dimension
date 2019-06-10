@@ -1,42 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
+
+import About from './content/About'
+import Work from './content/Work'
+import Intro from './content/Intro'
 
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
-class Main extends React.Component {
-  render() {
+const Main = (props) =>  {
 
+  const handleClick = (e) => {
+    console.log(props.isArticleVisible)
+    if(e.path[0].id === "wrapper" && props.isArticleVisible){
+      console.log("this worked")
+      props.onCloseArticle()
+    }
+  }
+
+
+  useEffect(()=>{
+    document.addEventListener('mousedown', (event) => handleClick(event))
+  }, [props.isArticleVisible])
     let close = <div className="close" onClick={() => {
-      this.props.onCloseArticle()
+      props.onCloseArticle()
     }}></div>
 
     return (
-      <div ref={this.props.setWrapperRef} id="main"
-           style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
+      <div id="main"
+           style={props.timeout ? { display: 'flex' } : { display: 'none' }}>
 
-        <article id="intro"
-                 className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
-                 style={{ display: 'none' }}>
-          <h2 className="major">Intro</h2>
-          <span className="image main"><img src={pic01} alt=""/></span>
-          <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.
-            Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi
-            nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh
-            porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in
-            aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.</p>
-          {close}
-        </article>
+        <Intro
+          active={props.article === 'intro'}
+          articleTimeout={props.articleTimeout}
+          onCloseArticle={props.onCloseArticle}
+        />
 
         <article id="work"
-                 className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
+                 className={`${props.article === 'work' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''}`}
                  style={{ display: 'none' }}>
           <h2 className="major">Work</h2>
           <span className="image main"><img src={pic02} alt=""/></span>
@@ -51,7 +53,7 @@ class Main extends React.Component {
         </article>
 
         <article id="about"
-                 className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
+                 className={`${props.article === 'about' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''}`}
                  style={{ display: 'none' }}>
           <h2 className="major">About</h2>
           <span className="image main"><img src={pic03} alt=""/></span>
@@ -67,42 +69,11 @@ class Main extends React.Component {
           were therefore not seeing the opportunity right in front of us due to this past
           experience. With a few adjustments and a new perspective we found cash flow
             was the answer for us.</p>
-          <p>Once people knew we invested in regional Victoria we received well-meaning
-          advice about the pitfalls, undeterred we continued to work on our strategy and
-          the results became what we were aiming for and 8 &amp; 9% gross returns were
-            normal we started to get asked how?</p>
-          <p>We noticed friends and acquaintances would go to the country to see for
-          themselves, be so amazed by the much lower prices and positive rental return
-          they would ask around and purchase a property. BUT it’s not just any property
-          that will produce ongoing cash flow and every time a better investment option
-            would be secured with more local area knowledge.</p>
-          <p>As with any suburbs there can be one end of the street you wouldn’t buy into
-          as no one will rent from you and others ok, knowing what house/unit will rent
-          for the highest return and how much rental you will achieve can be very
-            different from what you are advised.</p>
-          <p>We purchase lower price point property, tidy them up cosmetically and
-          improve the quality of housing for people to live. We know what to pay, what
-          return to expect and where to buy, we sell our renovated houses or keep them
-          for cash flow depending on the deal at the time. Its simply about the numbers
-            every time.</p>
-
-          <p>Recently there was a discussion had with a representative from a capital city
-          sourcing property on behalf of clients, the criteria, a better area and style of
-            house to attract a better tenant (his words).</p>
-          <p>This strategy is often why investors purchase a single investment property in
-          regional Victoria and then decide it isn’t what they thought. We see this so
-          often (we did it ourselves), regional investing is a very specific market-the
-            above criteria in our experience is not the way to maximise cash flow returns.</p>
-
-          <p>We DONT advise or RECOMMEND property, or SELL to you- we simply help
-          investors who want to grow their portfolio with cash flow.
-          We secure properties regularly and wholesale opportunities are just one of our
-            services on offer.</p>
           {close}
         </article>
 
         <article id="contact"
-                 className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
+                 className={`${props.article === 'contact' ? 'active' : ''} ${props.articleTimeout ? 'timeout' : ''}`}
                  style={{ display: 'none' }}>
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
@@ -134,7 +105,6 @@ class Main extends React.Component {
 
       </div>
     )
-  }
 }
 
 Main.propTypes = {
@@ -143,7 +113,6 @@ Main.propTypes = {
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
 }
 
 export default Main
