@@ -48,6 +48,9 @@
 		}
 
 		.logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
@@ -58,6 +61,12 @@
 				&:before {
 					font-size: 2rem;
 				}
+			}
+
+
+			img {
+				width: 86px;
+				height: 57px;
 			}
 		}
 
