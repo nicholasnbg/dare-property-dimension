@@ -76,7 +76,6 @@
 			border-top-width: _size(border-width);
 			border-bottom-width: _size(border-width);
 			max-width: 100%;
-
 			.inner {
 				@include vendor('transition', (
 					'max-height #{_duration(intro)} ease',
@@ -90,6 +89,10 @@
 
 				> :last-child {
 					margin-bottom: 0;
+				}
+
+				#dare-text {
+					width: 80%;
 				}
 			}
 
