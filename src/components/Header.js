@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import logo from '../images/dare-logo.png'
 import icon from '../images/dare-house.png'
+import dareText from '../images/dare-text.png'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
@@ -11,8 +12,9 @@ const Header = (props) => (
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Dare Property Solutions</h1>
-                <p>We make shit houses awesome.</p>
+                {/*<h1>Dare Property Solutions</h1>*/}
+              <img id="dare-text" src={dareText} alt=""/>
+                {/*<p>We make shit houses awesome.</p>*/}
             </div>
         </div>
         <nav>
