@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import About from './content/About'
-import Work from './content/Work'
-import Intro from './content/Intro'
+import Services from './content/Services'
+import Results from './content/Results'
 import Contact from './content/Contact'
 
 import pic01 from '../images/pic01.jpg'
@@ -27,14 +27,14 @@ const Main = (props) =>  {
     return (
       <div id="main"
            style={props.timeout ? { display: 'flex' } : { display: 'none' }}>
-        <Intro
-          active={props.article === 'intro'}
+        <Results
+          active={props.article === 'results'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
         />
 
-        <Work
-          active={props.article === 'work'}
+        <Services
+          active={props.article === 'services'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
         />
