@@ -12,15 +12,13 @@ const Header = (props) => (
         </div>
         <div className="content">
             <div className="inner">
-                {/*<h1>Dare Property Solutions</h1>*/}
               <img id="dare-text" src={dareText} alt=""/>
-                {/*<p>We make shit houses awesome.</p>*/}
             </div>
         </div>
         <nav>
-            <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
+            <ul style={{"margin-right": "1px"}}>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('results')}}>Results</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('services')}}>Services</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
