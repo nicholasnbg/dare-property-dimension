@@ -13,6 +13,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
               <img id="dare-text" src={dareText} alt=""/>
+              <p>Our mission is simply to provide safe affordable housing for everyone</p>
             </div>
         </div>
         <nav>
