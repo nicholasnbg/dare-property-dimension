@@ -1,5 +1,11 @@
 import React from 'react'
 import Content from '../Content'
+import ResultPic from '../ResultPic'
+import unit_before from '../../images/unit_bedroom_before.jpg'
+import unit_after from '../../images/unit_bedroom_after.jpg'
+import kitchen_before from '../../images/unit_kitchen_before.jpg'
+import kitchen_after from '../../images/unit_kitchen_after.jpg'
+
 
 const Results = (props) => {
   return (
@@ -35,6 +41,9 @@ renovate to keep our options open to on sell when we choose.</p>
       <div className="close" onClick={() => {
         props.onCloseArticle()
       }} />
+
+      <ResultPic before={unit_before} after={unit_after} />
+      <ResultPic before={kitchen_before} after={kitchen_after} />
     </article>
   )
 }
