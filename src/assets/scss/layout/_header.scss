@@ -35,7 +35,7 @@
 				left: calc(50% - #{_size(border-width) * 1});
 				width: _size(border-width);
 				height: calc(3.5rem + 1px);
-				background: _palette(border);
+				// background: _palette(border);
 			}
 		}
 
@@ -54,7 +54,8 @@
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid _size(border-width) _palette(border);
+			// border: solid _size(border-width) _palette(border);
+			border: none;
 			border-radius: 100%;
 
 			.icon {
@@ -65,13 +66,13 @@
 
 
 			img {
-				width: 86px;
-				height: 57px;
+				width: 180px;
+				height: 120px;
 			}
 		}
 
 		.content {
-			border-style: solid;
+			border-style: none;
 			border-color: _palette(border);
 			border-top-width: _size(border-width);
 			border-bottom-width: _size(border-width);
