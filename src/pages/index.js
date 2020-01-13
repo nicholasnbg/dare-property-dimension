@@ -16,7 +16,7 @@ const IndexP = (props) => {
   useEffect(() => {
     setTimeoutId(setTimeout(() => {
       setLoading('');
-    }, 100))
+    }, 50))
     return () => {
       if(timeoutId){
         clearTimeout(timeoutId)
@@ -31,23 +31,23 @@ const IndexP = (props) => {
 
     setTimeout(() => {
       setFuncTimeout(true)
-    }, 325)
+    }, 100)
 
     setTimeout(() => {
       setArticleTimeout(true)
-    }, 350)
+    }, 125)
   }
 
   const handleCloseArticle = () => {
     setArticleTimeout(false)
     setTimeout(() => {
       setFuncTimeout(false)
-    }, 325)
+    }, 100)
 
     setTimeout(()=>{
       setIsArticleVisible(!isArticleVisible)
       setArticle('')
-    }, 350)
+    }, 125)
   }
 
   return (
