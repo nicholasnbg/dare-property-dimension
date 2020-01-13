@@ -5,6 +5,9 @@ import About from './content/About'
 import Services from './content/Services'
 import Results from './content/Results'
 import Contact from './content/Contact'
+import Story from './content/Story'
+import ItsSimple from './content/ItsSimple'
+
 
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
@@ -13,9 +16,10 @@ import pic03 from '../images/pic03.jpg'
 const Main = (props) =>  {
 
   const handleClick = (e) => {
-    console.log(props.isArticleVisible)
-    if(e.path[0].id === "wrapper" && props.isArticleVisible){
-      console.log("this worked")
+    if(
+      ((e.path && e.path[0].id === "wrapper") || 
+      (e.target && e.target.id == "wrapper")) 
+      && props.isArticleVisible){
       props.onCloseArticle()
     }
   }
@@ -27,6 +31,12 @@ const Main = (props) =>  {
     return (
       <div id="main"
            style={props.timeout ? { display: 'flex' } : { display: 'none' }}>
+        <Story
+          active={props.article === 'story'}
+          articleTimeout={props.articleTimeout}
+          onCloseArticle={props.onCloseArticle}
+        />
+
         <Results
           active={props.article === 'results'}
           articleTimeout={props.articleTimeout}
@@ -35,6 +45,12 @@ const Main = (props) =>  {
 
         <Services
           active={props.article === 'services'}
+          articleTimeout={props.articleTimeout}
+          onCloseArticle={props.onCloseArticle}
+        />
+
+        <Services
+          active={props.article === 'itsSimple'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
         />

@@ -18,8 +18,10 @@ const Header = (props) => (
         </div>
         <nav>
             <ul style={{"margin-right": "1px"}}>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('story')}}>Story</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('results')}}>Results</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('services')}}>Services</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('itsSimple')}}>Services</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
