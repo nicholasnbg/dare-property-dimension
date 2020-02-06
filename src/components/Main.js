@@ -49,7 +49,7 @@ const Main = (props) =>  {
           onCloseArticle={props.onCloseArticle}
         />
 
-        <Services
+        <ItsSimple
           active={props.article === 'itsSimple'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
