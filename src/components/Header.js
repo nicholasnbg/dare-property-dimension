@@ -13,7 +13,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
               <img id="dare-text" src={dareText} alt=""/>
-              <p>Our mission is simply to provide safe affordable housing for everyone</p>
+              <p>Our purpose is simply to provide safe affordable, quality housing for everyone</p>
             </div>
         </div>
         <nav>
@@ -26,6 +26,9 @@ const Header = (props) => (
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
         </nav>
+        <div className="social">
+            Social icons
+        </div>
     </header>
 )
 
