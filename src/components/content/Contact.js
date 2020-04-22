@@ -25,6 +25,8 @@ const Contact = props => {
           <li><input type="reset" value="Reset"/></li>
         </ul>
       </form>
+
+      <p>ABN 89 293 196178</p>
       {/* <ul className="icons">
         <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
         <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>

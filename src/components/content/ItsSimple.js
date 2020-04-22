@@ -16,9 +16,6 @@ const paragraphs = [
   thought it would be. We see this so often (we did it ourselves),
   regional investing is a very specific market – the above criteria in our
   experience is not the way to maximise cash flow returns.`,
-  `We DON’T advise or RECOMMEND property listings, or SELL to you-
-  we simply help investors who want to grow their portfolio with Cash
-  flow.`,
   `We secure properties regularly and wholesale opportunities are just
   one of our services on offer.`
 ]
