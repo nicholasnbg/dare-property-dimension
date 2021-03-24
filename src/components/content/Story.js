@@ -5,7 +5,7 @@ const paragraphs = [
   `I am Vanessa Thomas the founder of Dare Property Solutions.`,
   `For over 25 years country Victoria was my home with my extended
   family remaining in the area today.`,
- `Melbourne is where I live now with my husband, children and
+  `Melbourne is where I live now with my husband, children and
   grandchildren all involved in the business in some way.
   Property has always been my passion and having invested in suburbs
   for many years not achieving the returns I was looking for, I came
@@ -25,16 +25,18 @@ const paragraphs = [
   `I am as passionate about the quality of living for everyone as I am
   about making a profit. A well maintained, secure property producing
   a weekly income is the outcome I must achieve with each purchase.
-  I love what I do and strive to leave a legacy for my family.`
+  I love what I do and strive to leave a legacy for my family.`,
 ]
 
-const Story = (props) =>
+const Story = props => (
   <Content
-    articleId={"story"}
+    articleId={'story'}
     paragraphs={paragraphs}
+    title={"Story"}
     active={props.active}
     articleTimeout={props.articleTimeout}
     onCloseArticle={props.onCloseArticle}
   />
+)
 
 export default Story

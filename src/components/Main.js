@@ -12,6 +12,7 @@ import ItsSimple from './content/ItsSimple'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import Testimonials from './content/Testimonials'
 
 const Main = (props) =>  {
 
@@ -41,11 +42,13 @@ const Main = (props) =>  {
           active={props.article === 'results'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
+          title={"Results"}
         />
 
         <Services
           active={props.article === 'services'}
           articleTimeout={props.articleTimeout}
+          title={"Services"}
           onCloseArticle={props.onCloseArticle}
         />
 
@@ -55,8 +58,8 @@ const Main = (props) =>  {
           onCloseArticle={props.onCloseArticle}
         />
 
-        <About
-          active={props.article === 'about'}
+        <Testimonials
+          active={props.article === 'testimonials'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
         />

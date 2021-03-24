@@ -25,6 +25,7 @@ const ItsSimple = (props) =>
     articleId={"itsSimple"}
     paragraphs={paragraphs}
     active={props.active}
+    title={"It's Simple"}
     articleTimeout={props.articleTimeout}
     onCloseArticle={props.onCloseArticle}
   />

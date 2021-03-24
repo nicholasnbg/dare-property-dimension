@@ -13,7 +13,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
               <img id="dare-text" src={dareText} alt=""/>
-              <p>Our purpose is simply to provide safe affordable, quality housing for everyone</p>
+              <p>We SOURCE CASH POSITIVE property, we RENOVATE property, HOW CAN WE HELP YOU?</p><p>Call today and find out</p>
             </div>
         </div>
         <nav>
@@ -22,7 +22,7 @@ const Header = (props) => (
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('results')}}>Results</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('services')}}>Services</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('itsSimple')}}>It's Simple</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('testimonials')}}>Testimonials</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
         </nav>

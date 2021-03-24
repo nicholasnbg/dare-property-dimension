@@ -19,6 +19,7 @@ const paragraphs = [
 const About = (props) =>
   <Content
     articleId={"about"}
+    title={"About"}
     paragraphs={paragraphs}
     active={props.active}
     articleTimeout={props.articleTimeout}
