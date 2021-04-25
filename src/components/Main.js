@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
 
-import About from './content/About'
+import Buyers from './content/Buyers'
 import Services from './content/Services'
 import Results from './content/Results'
 import Contact from './content/Contact'
@@ -9,9 +8,6 @@ import Story from './content/Story'
 import ItsSimple from './content/ItsSimple'
 
 
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 import Testimonials from './content/Testimonials'
 
 const Main = (props) =>  {
@@ -66,6 +62,11 @@ const Main = (props) =>  {
 
         <Contact
           active={props.article === 'contact'}
+          articleTimeout={props.articleTimeout}
+          onCloseArticle={props.onCloseArticle}
+        />
+        <Buyers
+          active={props.article === 'buyers'}
           articleTimeout={props.articleTimeout}
           onCloseArticle={props.onCloseArticle}
         />

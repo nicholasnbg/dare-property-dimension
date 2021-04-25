@@ -7,6 +7,10 @@ const Contact = props => {
              className={`${props.active && 'active'} ${props.articleTimeout && 'timeout'}`}
              style={{ display: 'none' }}>
       <h2 className="major">Contact</h2>
+      <h3>Phone</h3>
+      <p>You can contact Vanessa on 0439 726 411</p>
+      <br></br>
+      <h3>Contact form</h3>
       <form name="contact-form" method="post" data-netlify="true">
       <input type="hidden" name="form-name" value="contact-form" />
         <div className="field half first">
@@ -43,3 +47,4 @@ const Contact = props => {
 
 
 export default Contact
+

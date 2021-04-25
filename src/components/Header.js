@@ -24,11 +24,12 @@ const Header = (props) => (
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('itsSimple')}}>It's Simple</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('testimonials')}}>Testimonials</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('buyers')}}>Buyers</a></li>
             </ul>
         </nav>
-        <div className="social">
+        {/* <div className="social">
             Social icons
-        </div>
+        </div> */}
     </header>
 )
 
